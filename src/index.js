@@ -13,7 +13,11 @@ app.use(bodyParser.json());
 app.use(authRoutes);
 app.use(trackRoutes);
 
-const mongoUri = 'mongodb+srv://mongo:mongo@cluster-rn-course.noas3.mongodb.net/rn-tracks?retryWrites=true&w=majority';
+console.log("RN-TRACK-SERVER===============================");
+console.log("Remember to start the ngrok tunnel to make this available through internet.");
+console.log("If you can't connect to mongo instance, ensure in Mongodb Atlas your current IP is whitelisted.");
+console.log("==============================================");
+const mongoUri = 'mongodb+srv://mongo:knWvX4TLzgShbeoM@cluster-rn-course.noas3.mongodb.net/rn-tracks?retryWrites=true&w=majority';
 if (!mongoUri) {
   throw new Error(
     `MongoURI was not supplied.  Make sure you watch the video on setting up Mongo DB!`
